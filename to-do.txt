@@ -1,0 +1,5 @@
+##To do
+* melhorar o design e css
+* tratamento de erros
+* melhorar os form modules reativos
+* implementar métodos assíncronos
