@@ -1,6 +1,6 @@
 # php-angular-crud
 
-## 📌 Versão
+##  Versão
 * Angular CLI: 16.1.3
 * Node: 18.15.0
 * rxjs: 7.8.1
