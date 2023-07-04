@@ -2,6 +2,9 @@
 
 
 
+frontend: http://localhost:4200
+backend: http://127.0.0.1:8000
+
 ##  Versão
 * Angular CLI: 16.1.3
 * Node: 18.15.0
