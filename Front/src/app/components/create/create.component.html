@@ -1,0 +1,36 @@
+<form (ngSubmit)="insertData()" [formGroup]="productForm" #formDir="ngForm">
+
+    <div class="form-group">
+        <label for="name">Nome</label>
+        <input type="text" formControlName="name" class="form-control" >
+    </div>
+    <div *ngIf="name.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="name.errors?.['required']">O Nome é obrigatório</p>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Descrição</label>
+        <input type="text" formControlName="description" class="form-control" >
+    </div>
+    <div *ngIf="description.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="description.errors?.['required']">A descrição é obrigatória</p>
+    </div>
+    
+    <div class="form-group">
+        <label for="price">Preço</label>
+        <input type="number" formControlName="price" class="form-control" >
+    </div>
+    <div *ngIf="price.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="price.errors?.['required']">O preço é obrigatório</p>
+    </div>
+
+    <div class="form-group">
+        <label for="image">Link da imagem</label>
+        <input type="text" formControlName="image" class="form-control">
+    </div>
+    <div *ngIf="image.invalid && formDir.submitted" class="validation-error">
+        <p *ngIf="image.errors?.['required']">O link da imagem é obrigatório</p>
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Criar</button>
+</form>

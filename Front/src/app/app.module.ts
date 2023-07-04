@@ -9,9 +9,11 @@ import { TruncatePipe } from './components/products/products.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { CreateComponent } from './components/create/create.component';
 
 const appRoutes: Routes = [
   { path: '', component:ProductsComponent },
+  { path: 'create', component:CreateComponent },
   { path: 'edit/:id', component:ProductEditComponent },
 ]
 
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     ProductsComponent,
     NavbarComponent,
     TruncatePipe,
-    ProductEditComponent],
+    ProductEditComponent,
+    CreateComponent],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),

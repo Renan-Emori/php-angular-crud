@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/product';
 import { DataService } from 'src/app/service/data.service';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-edit',
@@ -19,14 +20,15 @@ export class ProductEditComponent {
   product = new Product();
   formData = new FormData()
 
-  constructor(private route:ActivatedRoute, private dataService: DataService, private formBuilder: FormBuilder){ }
+  constructor(private route:ActivatedRoute, private dataService: DataService, private formBuilder: FormBuilder, private router: Router){ }
 
   ngOnInit(){
     this.id = this.route.snapshot.params['id'];
 
     this.dataService.getProductById(this.id).subscribe(res => {
       this.data = res;
-      this.product = this.data;
+      //this.product = this.data;
+      console.log(this.data)
     });
     this.producteditform = this.formBuilder.group({
       name: new FormControl(),
@@ -64,6 +66,7 @@ export class ProductEditComponent {
 
   updateProduct(){
     this.dataService.updateData( this.id, this.producteditform.value ).subscribe(res => {
+      this.router.navigate(['/'])
     });
   }
 }

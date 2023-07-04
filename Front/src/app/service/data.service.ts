@@ -7,8 +7,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http'
 })
 export class DataService {
   private ApiUrl = 'http://127.0.0.1:8000/api/products/';
-  private body = { key: 'value' };
-  private options = {}
   constructor(private httpClient:HttpClient) { }
 
   getData(){
