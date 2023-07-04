@@ -17,3 +17,4 @@ backend: http://127.0.0.1:8000
 * melhorar o design e css
 * tratamento de erros
 * melhorar os form modules reativos
+* implementar métodos assíncronos
