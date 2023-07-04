@@ -1,6 +1,6 @@
-# php-angular-crud
+# php-angular
 
-
+WEB api CRUD
 
 frontend: http://localhost:4200
 backend: http://127.0.0.1:8000
