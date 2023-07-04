@@ -12,9 +12,3 @@ backend: http://127.0.0.1:8000
 * typescript: 5.1.6
 * PHP: 8.1.10
 * SQL-server
-
-##To do
-* melhorar o design e css
-* tratamento de erros
-* melhorar os form modules reativos
-* implementar métodos assíncronos
